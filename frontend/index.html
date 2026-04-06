@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AppuntiPolito - Overleaf SignUp</title>
+
+    <!-- Include the provided CSS -->
+    <link rel="stylesheet" href="register/main-style-f17f58e57337cfb154da.css">
+
+    <!-- Include Cloudflare Turnstile -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="register/script.js"></script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default navbar-main">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+                <a class="navbar-title" href="/" aria-label="Overleaf AppuntiPolito">Overleaf AppuntiPolito</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/register">Sign Up</a></li>
+                    <li><a href="/login">Sign In</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Signup Form -->
+    <main class="content content-alt">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+                    <div class="card">
+                        <div class="page-header">
+                            <h1>AppuntiPolito Overleaf Sign Up</h1>
+                            <p>You must use your <b>@studenti.polito.it</b> or <b>@edu.unito.it</b> email.</p>
+                        </div>
+                        <form id="registration-form">
+                            <div class="form-group">
+                                <input
+                                    class="form-control"
+                                    type="email"
+                                    name="email"
+                                    placeholder="your.email@allowed-domain.it"
+                                    required
+                                >
+                            </div>
+                            <!-- Add Turnstile widget -->
+                            <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY_HERE"></div>
+                            <div class="form-group">
+                                <div>
+                                    <input type="checkbox" id="agree-tos" name="agree-tos" required>
+                                    <label for="agree-tos">
+                                        I have read and agree to the 
+                                        <a href="#" id="open-tos-modal">Terms of Service</a> and the <a href="register/privacy.html" target="_blank">Privacy Policy</a>.
+                                    </label>
+                                </div>
+                            </div>                            
+                            <div class="actions">
+                                <button class="btn-primary btn" type="submit">
+                                    Sign Up
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<!-- ToS Modal -->
+<div id="tos-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-tos-modal" class="close">&times;</span>
+        <h2>Terms of Service</h2>
+        
+        <p>Welcome to the AppuntiPolito Overleaf platform, a service provided and maintained by volunteers on a best-effort basis. By using this service, you agree to the following terms:</p>
+
+        <h3>1. Permitted Use</h3>
+        <ul>
+            <li><strong>No Commercial Use:</strong> This service is strictly for personal and educational purposes. Commercial use is not permitted.</li>
+            <li><strong>No Copyrighted Material:</strong> Uploading, sharing, or storing copyrighted materials without proper authorization is strictly prohibited.</li>
+            <li><strong>No NSFW, Gore, or other Illegal Content:</strong> Any content that is obscene, offensive, related to drugs, promotes violence, or violates the law is strictly forbidden.</li>
+        </ul>
+
+        <h3>2. User Responsibility</h3>
+        <ul>
+            <li><strong>Backup Your Work:</strong> Users are responsible for keeping backups of their work. This platform provides no guarantees for data safety or service availability.</li>
+            <li><strong>Self-Reliance:</strong> The platform is provided as-is, without any guarantees. Users assume all responsibility for the consequences of using the service.</li>
+            <li><strong>Academic Focus:</strong> This service is designed to overcome the limitations of the SaaS Overleaf offering (e.g., compile minutes) by hosting a community-driven Overleaf instance.</li>
+        </ul>
+
+        <h3>3. Service Availability and Liability</h3>
+        <p><strong>No Guarantees:</strong> The service is maintained by volunteers on a best-effort basis. We do not guarantee uptime, functionality, or data safety.</p>
+        <p><strong>No Liability:</strong> The staff is not responsible for any loss of data, unavailability of the service, or other issues. Use this service at your own risk.</p>
+        <p><strong>Volunteers Only:</strong> This is a free community service. As such, there is no formal support or warranty.</p>
+        <p class="important">
+            <strong>IMPORTANT:</strong> Keep a backup of your work on a personal storage device or cloud service. Do not rely on this platform as the sole location for your data.
+        </p>
+
+        <h3>4. Abuse and Termination</h3>
+        <ul>
+            <li><strong>Abuse Policy:</strong> Any user found engaging in prohibited activities or violating the rules may have their access revoked without prior notice.</li>
+            <li><strong>Service Shutdown:</strong> The staff reserves the right to discontinue the service at any time, especially in cases of repeated abuse by the user base.</li>
+            <li><strong>Law Enforcement:</strong> In cases of illegal activity, the staff will cooperate with law enforcement authorities and provide any necessary information.</li>
+        </ul>
+
+        <h3>5. Acceptance of Terms</h3>
+        <p>By using this service, you acknowledge that you have read and understood these terms. Continued use of the platform constitutes your agreement to these terms.</p>
+
+        <p>If you have questions or concerns regarding these terms, please contact the staff. Thank you for respecting the community and helping us maintain a safe and productive environment for everyone.</p>
+    </div>
+</div>
+
+
+<footer class="site-footer"><div class="site-footer-content hidden-print"><div class="row"><ul class="col-md-9"><li>&copy; 2024
+    <a href="https://www.overleaf.com/for/enterprises">Powered by Overleaf</a></li><li><strong class="text-muted">|</strong></li><li>Hosted and maintained by <a href="mailto:ito@lynxcloud.it">lynxcloud OdV - Turin</a> &copy; 2024</li></ul><ul class="col-md-3 text-right"><li><a href="https://github.com/overleaf/overleaf"><i class="fa fa-github-square"></i> Fork on GitHub!</a></li></ul></div></div></footer>
+
+</body>
+</html>
